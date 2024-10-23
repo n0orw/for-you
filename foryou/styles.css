@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f0f8;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    position: relative;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.heart {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: pulse 1.5s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -40px;
+    left: 0;
+}
+
+.heart:after {
+    left: 40px;
+    top: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #d44e4e;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 1.1em;
+    padding: 0 10px;
+}
+
+#surpriseButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #d44e4e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#loveLetter {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.countdown {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.photos img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .heart {
+        width: 100px;
+        height: 100px;
+    }
+
+    .heart:before,
+    .heart:after {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .photos img {
+        width: 150px;
+        height: 150px;
+    }
+}
